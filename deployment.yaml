@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: simple-node
-          image: sabarinat1908/kube-learning:v2
+          image: sabarinat1908/kube-learning:{tag}
           ports:
             - containerPort: 3000
