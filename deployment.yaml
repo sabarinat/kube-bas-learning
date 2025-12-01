@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-node-deployment
+  namespace: ind
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-node
+  template:
+    metadata:
+      labels:
+        app: my-node
+    spec:
+      containers:
+        - name: simple-node
+          image: sabarinat1908/kube-learning:v1
+          ports:
+            - containerPort: 3000
