@@ -7,10 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: localhost/{name_space}/{country}
+    - host: localhost.{country}.com
       http:
         paths:
-          - path: /
+          - path: /{name_space}
             pathType: Prefix
             backend:
               service:
