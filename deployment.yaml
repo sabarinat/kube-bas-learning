@@ -18,3 +18,8 @@ spec:
           image: sabarinat1908/kube-learning:{tag}
           ports:
             - containerPort: 3000
+          env:
+            - name: env
+              value: '{country}'
+            - name: country
+              value: '{name_space}'
